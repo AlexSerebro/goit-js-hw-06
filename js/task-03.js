@@ -42,10 +42,9 @@ const makeListCard = image=> {
     `
 }
 
-makeListCard(images[0])
 
 
 const makeList = images.map(makeListCard).join('');
-console.log("~ makeLis", makeList)
+// console.log("~ makeLis", makeList)
 
 addList.insertAdjacentHTML("afterbegin", makeList);
