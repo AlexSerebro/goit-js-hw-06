@@ -12,3 +12,40 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+
+const addList = document.querySelector('ul');
+
+
+// const makelistCard = ({url, alt}) => {
+//   const listEl = document.createElement('li');
+//   listEl.classList.add("item")
+
+//   const imgEl = document.createElement('img');
+//   imgEl.src = url;
+//   imgEl.alt = alt;
+//   listEl.append(imgEl);
+//   return listEl;
+// };
+
+// const imgCards = images.map(makelistCard);
+// console.log("~ imgCards", imgCards)
+
+// addList.append(...imgCards)
+
+const makeListCard = image=> {
+  return `
+    <li class='item'>
+      <img src="${image.url}" alt="${image.alt}" class= 'item--img'>
+      </li>
+    </ul>
+    `
+}
+
+makeListCard(images[0])
+
+
+const makeList = images.map(makeListCard).join('');
+console.log("~ makeLis", makeList)
+
+addList.insertAdjacentHTML("afterbegin", makeList);
