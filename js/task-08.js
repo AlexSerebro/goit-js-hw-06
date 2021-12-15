@@ -1,6 +1,6 @@
 const form = document.querySelector('.login-form');
 
-form.addEventListener('submit', onFormSubmit)
+form.addEventListener('submit', onFormSubmit);
 
 function onFormSubmit(event) {
   event.preventDefault();
@@ -14,12 +14,12 @@ function onFormSubmit(event) {
   if (password == false || mail == false) {
     alert("Заполните все поля");
     return;
-  }
+  };
 
   const formData = {
     mail,
     password,
-  }
+  };
   console.log(formData);
   form.reset();
   
@@ -29,4 +29,4 @@ function onFormSubmit(event) {
   //   console.log("~ value", value)
     
   // })
-}
+};
