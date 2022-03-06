@@ -2,7 +2,7 @@ const refLi= document.querySelectorAll('.item');
 console.log(`Number of categories: ${refLi.length}`);
 console.log("");
 
-// console.log(refLi);
+console.log(refLi);
 
 [...refLi].map(item => { 
   
