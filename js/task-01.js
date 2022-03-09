@@ -32,13 +32,16 @@ console.log(refLi);
 // removeChar("abcd");
 // console.log(removeChar("abcd"));
 
-function findMatches(x, ...args) {
-  const matches = []; // Don't change this line
-  for (y of x) {
-    if (y.includes(args)) {
-      matches.push(y);
-    }
-  }
-  // Change code above this line
-  return matches;
+function abbrevName(name) {
+  return name
+    .split(" ")
+    .map((i) => i[0].toUpperCase())
+    .join(".");
+  // const arrname = name.split(" ");
+  // return `${arrname[0].slice(0, 1).toUpperCase()}. ${arrname[1]
+  //   .slice(0, 1)
+  //   .toUpperCase()}.`;
 }
+
+abbrevName("Sam Harris");
+console.log(abbrevName("Sam Harris"));
