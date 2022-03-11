@@ -92,32 +92,49 @@ console.log(refLi);
 // atTheOldToad.updatePotionName("Dragon breath", "Polymorth");
 // atTheOldToad.getPotions();
 
-const pizzaPalace = {
-  pizzas: ["Ultracheese", "Smoked", "Four meats"],
-  order(pizzaName, onSuccess, onError) {
-    if (this.pizzas.includes(pizzaName)) {
-      return makePizza(pizzaName);
-    }
+// const pizzaPalace = {
+//   pizzas: ["Ultracheese", "Smoked", "Four meats"],
+//   order(pizzaName, onSuccess, onError) {
+//     if (this.pizzas.includes(pizzaName)) {
+//       return makePizza(pizzaName);
+//     }
 
-    return onOrderError(
-      `There is no pizza with a name ${pizzaName} in the assortment.`
-    );
-  },
-};
-// Change code above this line
+//     return onOrderError(
+//       `There is no pizza with a name ${pizzaName} in the assortment.`
+//     );
+//   },
+// };
+// // Change code above this line
 
-// Callback for onSuccess
-function makePizza(pizzaName) {
-  return `Your order is accepted. Cooking pizza ${pizzaName}.`;
-}
+// // Callback for onSuccess
+// function makePizza(pizzaName) {
+//   return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+// }
 
-// Callback for onError
-function onOrderError(error) {
-  return `Error! ${error}`;
-}
+// // Callback for onError
+// function onOrderError(error) {
+//   return `Error! ${error}`;
+// }
 
-// Method calls with callbacks
-console.log(pizzaPalace.order("Smoked", makePizza, onOrderError));
-pizzaPalace.order("Four meats", makePizza, onOrderError);
-pizzaPalace.order("Big Mike", makePizza, onOrderError);
-pizzaPalace.order("Vienna", makePizza, onOrderError);
+// // Method calls with callbacks
+// console.log(pizzaPalace.order("Smoked", makePizza, onOrderError));
+// pizzaPalace.order("Four meats", makePizza, onOrderError);
+// pizzaPalace.order("Big Mike", makePizza, onOrderError);
+// pizzaPalace.order("Vienna", makePizza, onOrderError);
+
+// function calculateTotalPrice(orderedItems) {
+//   let totalPrice = 0;
+//   // Change code below this line
+//   orderedItems.forEach(function (elem) {
+//     totalPrice += elem;
+//     console.log("~ totalPrice", totalPrice);
+//   });
+
+//   // Change code above this line
+//   return totalPrice;
+// }
+
+// calculateTotalPrice([12, 85, 37, 4]);
+const sum = (...numbers) => numbers.reduce((acc, number) => acc + number, 2);
+const answer = sum(1, 5, 20, 10);
+console.log(answer);
